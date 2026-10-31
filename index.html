@@ -14,47 +14,41 @@
       overflow: hidden;
       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     }
-    .wrap {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      padding: 24px;
-      box-sizing: border-box;
+    .bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: #000 url("mumbos-zcity-darkrp-intro.jpg") center center / cover no-repeat;
     }
-    img {
-      max-width: min(96vw, 1280px);
-      max-height: min(78vh, 720px);
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      display: block;
-      border: 0;
-      box-shadow: 0 0 40px rgba(180, 0, 0, 0.35);
+    .bar {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      padding: 18px 24px 22px;
+      text-align: center;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0));
     }
     h1 {
-      margin: 0;
+      margin: 0 0 6px;
       color: #e8e8e8;
-      font-size: clamp(18px, 2.4vw, 28px);
+      font-size: 28px;
+      font-size: clamp(18px, 2.4vw, 32px);
       font-weight: 700;
       letter-spacing: 0.12em;
-      text-align: center;
-      text-shadow: 0 0 12px rgba(255, 40, 40, 0.55);
+      text-shadow: 0 0 12px rgba(255, 40, 40, 0.65), 0 2px 4px #000;
     }
     .status {
-      color: #9a9a9a;
+      color: #cfcfcf;
       font-size: 14px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      text-shadow: 0 2px 4px #000;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <img src="mumbos-zcity-darkrp-intro.jpg" alt="MUMBO'S Z-CITY DARK RP" />
+  <div class="bg"></div>
+  <div class="bar">
     <h1>MUMBO'S Z-CITY DARK RP</h1>
     <div class="status" id="status">Connecting&hellip;</div>
   </div>
